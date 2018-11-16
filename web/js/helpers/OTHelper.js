@@ -368,6 +368,10 @@
       subscribeTo(aStream, 'Video', value);
     }
 
+    function toggleFacingMode() {
+      _publisher.cycleVideo();
+    }
+
     function toggleSubscribersAudio(aStream, value) {
       subscribeTo(aStream, 'Audio', value);
     }
@@ -537,6 +541,7 @@
       subscribe: subscribe,
       toggleSubscribersAudio: toggleSubscribersAudio,
       toggleSubscribersVideo: toggleSubscribersVideo,
+      toggleFacingMode: toggleFacingMode,
       togglePublisherAudio: togglePublisherAudio,
       togglePublisherVideo: togglePublisherVideo,
       shareScreen: shareScreen,
