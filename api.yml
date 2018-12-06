@@ -17,6 +17,7 @@ produces:
   - text/html
 x-implementation-module: serverMethods.js
 x-implementation-middleware:
+  - httpRedirect
   - configReady
   - oldVersionCompat
   - iframingOptions

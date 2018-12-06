@@ -752,6 +752,14 @@ function ServerMethods(aLogLevel, aModules) {
     });
   }
 
+  function httpRedirect(aReq, aRes, aNext) {
+    if (aReq.headers['x-forwarded-proto'] != 'https') {
+      aRes.redirect(302, 'https://' + aReq.hostname + aReq.originalUrl);
+    } else {
+      aNext();
+    }
+  }
+
   return {
     logger,
     configReady,
@@ -770,6 +778,7 @@ function ServerMethods(aLogLevel, aModules) {
     postHangUp,
     getHealth,
     oldVersionCompat,
+    httpRedirect,
   };
 }
 
