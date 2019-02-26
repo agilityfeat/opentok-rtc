@@ -1104,21 +1104,38 @@ body[data-annotation-visible=true]  {
 }
 
 #lefthand-container {
-  height: 100%;
   width: 498px;
   @media @smartphonesPortrait {
     width: 100%;
   }
   left: 0;
   position: absolute;
+  display: flex;
+  top: 0;
+  align-items: center;
+  height: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 #lefthand-container-cell {
   vertical-align: middle;
   display: table-cell;
   img {
-    width: auto;
-    max-width: 750px;
+    width: 800px;
     margin-left: 100px;
-    margin-top: 130px;
+  }
+}
+
+@media (min-width: 1660px) {
+  #lefthand-container {
+    justify-content: center;
+    width: 100%;
+    #lefthand-container-cell {
+      img {
+        margin-left: 0;
+      }
+    }
   }
 }
