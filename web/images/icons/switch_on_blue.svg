@@ -25,7 +25,7 @@
         </filter>
     </defs>
     <g fill="none" fill-rule="evenodd">
-        <rect width="50.522" height="30.383" fill="#0099CA" rx="15.191"/>
+        <rect width="50.522" height="30.383" fill="#0077FF" rx="15.191"/>
         <use fill="#000" filter="url(#a)" xlink:href="#b"/>
         <use fill="#FFF" xlink:href="#b"/>
         <ellipse cx="35.168" cy="15.191" stroke="#000" stroke-opacity=".1" stroke-width=".5" rx="14.119" ry="13.971"/>
