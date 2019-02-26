@@ -755,9 +755,9 @@ function ServerMethods(aLogLevel, aModules) {
   function httpRedirect(aReq, aRes, aNext) {
     aNext();
     if (aReq.headers['x-forwarded-proto'] != 'https' ) {
-      // aRes.redirect(302, 'https://' + aReq.hostname + aReq.originalUrl);
+      aRes.redirect(302, 'https://' + aReq.hostname + aReq.originalUrl);
     } else {
-      // aNext();
+      aNext();
     }
   }
 
