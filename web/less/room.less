@@ -549,10 +549,7 @@ body {
 }
 
 .user-name-modal {
-  background-color: black;
-  background-image: url(/images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #fff;
   padding: 0;
   #logo {
     position: absolute;
@@ -567,8 +564,8 @@ body {
 }
 
 .user-name-modal #name-heading {
-    top: 34px;
-    text-shadow: black 1px 1px 8px;
+    color: #102A5B;
+    margin-left: -5px;
 }
 
 .user-name-modal .tc-dialog {
@@ -581,10 +578,13 @@ body {
     padding: 10px;
   }
   max-width: 360px;
-  background: rgba(0,0,0,0.6);
+  background: #fff;
   transform: translateY(0);
-  color: white;
-  text-shadow: black 1px 1px 8px;
+  color: #4A4A4A;
+  border-style: solid;
+  border-color: #ADADAD;
+  border-width: 1px;
+  box-shadow: none;
 
   @media @smartphonesPortrait {
     width: 100%;
@@ -684,7 +684,7 @@ body {
       display: flex;
       label {
         font-size: 12px;
-        color: #8e99a5;
+        color: #4A4A4A;
       }
     }
   }
@@ -738,12 +738,12 @@ body {
     width: 89px;
   }
   #audio-meter-level {
-    background-color: #10a9dc;
+    background-color: #0077FF;
     height: 100%;
   }
 
   #audio-settings, #pre-call-test {
-    border-top: #434d5a 1px solid;
+    border-top: lightgray 1px solid;
     padding-top: 17px;
     clear: both;
   }
@@ -760,7 +760,7 @@ body {
       position: absolute;
       right: 10px;
       label {
-        color: #c6c6c6;
+        color: gray;
         font-size: 10px;
         line-height: 26px;
         text-align: right;
@@ -798,7 +798,7 @@ body {
   }
 
   #precall-test-meter-level {
-    background-color: #10a9dc;
+    background-color: #0077FF;
     height: 100%;
     width: 0;
     background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
@@ -825,6 +825,7 @@ body {
   display: flex;
   align-items: center;
   height: 100%;
+  justify-content: center;
   @media @smartphones {
     width: 100%;
     margin: 0;
@@ -839,7 +840,9 @@ body {
   height: 420.4px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ADADAD;
   color: #494747;
   font-size: 14px;
   padding: 35px;
@@ -932,11 +935,11 @@ body {
   }
 }
 #name-heading {
-  font-size: 30px;
+  font-size: 24px;
+  font-weight: 600;
   margin: 0 0 26px;
   position: absolute;
-  top: 32px;
-  left: 184px;
+  margin-top: -300px;
   @media @smartphones {
     display: none;
   }
@@ -1031,7 +1034,7 @@ body {
   }
 
   .btn-blue {
-    background-color: #319cca;
+    background-color: #0077FF;
   }
 }
 
@@ -1101,4 +1104,57 @@ body[data-annotation-visible=true]  {
 
 .main {
   width: 100%
+}
+
+#lefthand-container {
+  width: 498px;
+  @media @smartphonesPortrait {
+    width: 100%;
+  }
+  left: 0;
+  position: absolute;
+  display: flex;
+  top: 0;
+  align-items: center;
+  height: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#lefthand-container-cell {
+  vertical-align: middle;
+  display: table-cell;
+  img {
+    width: 800px;
+    margin-left: 100px;
+    opacity: 0.7;
+  }
+}
+
+@media (min-width: 1660px) {
+  #lefthand-container {
+    justify-content: center;
+    width: 100%;
+    #lefthand-container-cell {
+      img {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #top-banner .icon-container {
+    min-width: 104px;
+  }
+
+  [data-icon="tokbox_logo_white"] {
+    margin-left: 16px;
+    width: 100%;
+  }
+
+  #top-banner #toggleArchiving, #top-banner #manageRecordings {
+    right: 82px;
+  }
 }
