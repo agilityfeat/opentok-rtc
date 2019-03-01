@@ -138,6 +138,8 @@
           var userNameInputElement = document.getElementById('user-name-input');
           userNameInputElement.value = username;
           userNameInputElement.setAttribute('readonly', true);
+        } else {
+          document.getElementById('name-heading').classList.add('no-name');
         }
       }
       otHelper.otLoaded.then(function () {
